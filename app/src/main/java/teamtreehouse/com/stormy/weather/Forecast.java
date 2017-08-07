@@ -9,4 +9,27 @@ public class Forecast {
     private Hour[] mHourlyForecast;
     private Day[] mDailyForecast;
 
+    public Current getmCurrent() {
+        return mCurrent;
+    }
+
+    public void setmCurrent(Current mCurrent) {
+        this.mCurrent = mCurrent;
+    }
+
+    public Hour[] getmHourlyForecast() {
+        return mHourlyForecast;
+    }
+
+    public void setmHourlyForecast(Hour[] mHourlyForecast) {
+        this.mHourlyForecast = mHourlyForecast;
+    }
+
+    public Day[] getmDailyForecast() {
+        return mDailyForecast;
+    }
+
+    public void setmDailyForecast(Day[] mDailyForecast) {
+        this.mDailyForecast = mDailyForecast;
+    }
 }
