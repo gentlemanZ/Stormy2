@@ -39,15 +39,15 @@
         android:textSize="18sp"/>
 
     <TextView
+        android:id="@+id/locationLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alcatraz Island, CA"
-        android:id="@+id/locationLabel"
         android:layout_above="@+id/timeLabel"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="60dp"
+        android:text="Brookline,MA"
         android:textColor="@android:color/white"
-        android:textSize="24sp"/>
+        android:textSize="24sp" />
 
     <ImageView
         android:layout_width="wrap_content"

@@ -30,6 +30,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 import teamtreehouse.com.stormy.R;
+import teamtreehouse.com.stormy.adapters.DayAdapter;
 import teamtreehouse.com.stormy.weather.Current;
 import teamtreehouse.com.stormy.weather.Day;
 import teamtreehouse.com.stormy.weather.Forecast;
@@ -39,7 +40,7 @@ import teamtreehouse.com.stormy.weather.Hour;
 public class MainActivity extends ActionBarActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
-
+    public static final String DAILY_FORECAST = "DAILY_FORECAST";
     private Forecast mForecast;
 
     @InjectView(R.id.timeLabel) TextView mTimeLabel;
@@ -60,8 +61,8 @@ public class MainActivity extends ActionBarActivity {
 
         mProgressBar.setVisibility(View.INVISIBLE);
 
-        final double latitude = 37.8267;
-        final double longitude = -122.423;
+        final double latitude = 42.348087;
+        final double longitude = -71.117342;
 
         mRefreshImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -262,7 +263,10 @@ public class MainActivity extends ActionBarActivity {
     @OnClick (R.id.dailyButton)
     public void startDailyActivity(View view){
         Intent intent = new Intent(this, DailyForecastActivity.class);
+        intent.putExtra(DAILY_FORECAST, mForecast.getmDailyForecast());
         startActivity(intent);
+
+
     }
 }
 
