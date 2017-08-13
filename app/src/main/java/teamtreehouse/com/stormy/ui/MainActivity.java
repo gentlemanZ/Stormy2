@@ -76,7 +76,7 @@ public class MainActivity extends ActionBarActivity {
 
         Log.d(TAG, "Main UI code is running!");
     }
-
+// adding some east egg for h3h3 production.
     private void getForecast(double latitude, double longitude) {
         String apiKey = "27974c4bc33201748eaf542a6769c3b7";
         String forecastUrl = "https://api.forecast.io/forecast/" + apiKey +
